@@ -11,3 +11,9 @@ endif()
 
 install(FILES your-completion-file.bash DESTINATION
   ${BASH_COMPLETION_COMPLETIONSDIR})
+autoreconf -i      # if not installing from prepared release tarball
+./configure
+make               # GNU make required
+make check         # optional
+make install       # as root
+make installcheck  # optional, requires python3 with pytest >= 3.6, pexpect
