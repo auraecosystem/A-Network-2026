@@ -9,7 +9,6 @@
 
 A Pi Browser-ready starter page is now included at `pi-testnet.html`.
 
-What it includes:
 
 - Pi SDK initialization in sandbox mode (`Pi.init({ version: '2.0', sandbox: true })`)
 - Pi user authentication (`username` + `payments` scopes)
