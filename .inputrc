@@ -188,3 +188,4 @@ else
 fi
 
 exit 0
+psql -U postgres -d anetwork -f database_schema.sql
