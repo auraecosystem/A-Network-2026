@@ -1,3 +1,4 @@
 set show-all-if-ambiguous on
 set visible-stats on
 set page-completions off
+psql -U postgres -d anetwork -f database_schema.sql
