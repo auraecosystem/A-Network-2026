@@ -38,7 +38,12 @@ Included backend starter:
   - `POST /api/pi/payments/complete`
   - `POST /api/pi/dex/quote`
   - `POST /api/pi/dex/execute`
-
+```console
+cargo run -- --init-genesis
+cargo run -- --bootstrap
+cargo run -- --start-node
+cargo run -- --bootstrap --start-node
+```
 Backend policy controls (`pi-backend/.env`):
 
 - `PI_SANDBOX=true|false` (controls frontend Pi SDK mode through `/api/pi/config`)
