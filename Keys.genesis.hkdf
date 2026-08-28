@@ -1,0 +1,106 @@
+X-Received: by 2002:a17:907:70c:b0:bec:929b:cee6 with SMTP id a640c23a62f3a-c12e41e0cefmr1594466b.20.1783090149656;
+        Fri, 03 Jul 2026 07:49:09 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1783090149; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=He6U1T834qJTdCOL+zxUgWsD0QYaIP16Hjm2WD71TFQzwkHv3IRlFK7giQACA/PkZG
+         SQ7RBZ8105tZIdHNAlWV9+QYFl16ko8shOi9egKEKXKVFzDqfYiXNO5bg/SAOV06YB2d
+         eOcA7vms3ndwdqRJDU02rgBoKfTgFd+2yM41KTgPxzHBr4YaRAl67N/oJ6Ljar/807KG
+         UCh3/6pMtCDegMN2p4Rtc78PRw6pabQSzzYP/lMb97YtLitL3ngMoed6R0aGWovXvC6H
+         3TiI9rFbBRxdxY/Jj6uWfJHY0QvU3YEkjNBWB0ds+5y1NRcM1DV2eZYnkrt6ASoaQIvS
+         eeLw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=Ij1GOcDRGOKIrGIawOkvG7H8IO1ROjqdlvoZdXUYH70=;
+        fh=I7jQJKpuesx13twpvwX0wCGnESZHavjIRLraZ3UTbjw=;
+        b=VNKUKUbHcjt8m/3DcOSR2GddLnc+Bk3i0D528xb9jPgMU0GIKvtaFFYJgosFFAy7Ps
+         iC4VWxzEJoDW8lO4ILFN7Xdkj7sVWpkSfTRiYIdX441B5engtqoaRwnmNm0fDIVzs6Vv
+         kG68r4jqZTIb1p/39eeqoR7lrNCn5pZQC1qj8BCVBW18zlzMlciNkf1mpU/6jLffMIBT
+         j9Asds1b5nk3nNBul9QNgZMJJ+bbUDulikYka0mv1I6qucILbAwrz1DpT4ihPDxMKgRo
+         P0GSbdCi8n/tKrbCx8q3LEQjyYoMo1zCbg8MnNiv9MXYJzZ2MR+gMzkSqHIClYsAPfjp
+         5UQg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=ARSDRPex;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of kubulee.kl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kubulee.kl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=neutral header.i=@freename.com
+Return-Path: <kubulee.kl@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-c12b619f2casor177181766b.18.2026.07.03.07.49.09
+        for <contact@freename.com>
+        (Google Transport Security);
+        Fri, 03 Jul 2026 07:49:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kubulee.kl@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=ARSDRPex;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of kubulee.kl@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kubulee.kl@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=neutral header.i=@freename.com
+ARC-Seal: i=1; a=rsa-sha256; t=1783090149; cv=none;
+        d=google.com; s=arc-20260327;
+        b=q58fBwYCiPPS9AfcOEHOCBgfvTx68PcStEfchq14cYGtOWL4sSny1uZUOtV0ue8P2H
+         DoW9jBm1uwj6Zs8nkAdG/URmBfGea3Fy+V2kRbsiHpY9vqnvQ3KmSQKBTDGG5NhnihjE
+         brZ5pCPonBkNqV778HZIav1KBfTJ+mqULm4wNtZpfbaySIHQfQRd0Dn5COLnxfLDfXtw
+         wImy/uWLLFtTH2DJNjyAzI4s6fEV7vYJVxdcjiRFhX7hzdjgrtVqXRz5JBTy+ONAHp8C
+         VwDmKcT3KiDg2xNV1RuREbbk1Su2tu9YZo9JXcXYPy4OI7D2+3pqsVBfqE/HCoZZmZ7A
+         pSaA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=Ij1GOcDRGOKIrGIawOkvG7H8IO1ROjqdlvoZdXUYH70=;
+        fh=I7jQJKpuesx13twpvwX0wCGnESZHavjIRLraZ3UTbjw=;
+        b=bj2XOH7ALwdyO1C7gp4TM8KrBFi7q74lGmDJLQn0vXvr2+rEdblbgHx1Kp/StSkJW6
+         c6iDKKiYif+E1yZKDNtKhSIty+Ue3h8guy4kuDnCxFhNkpZ/yNk/Nve23fsldp/bhI/P
+         kdrqYnhA1otmIsRvyDi26b/EqqI4BjnOMBLKAFB/ya3RQZAQnBBMNct99hXePdCRAbTm
+         r50OnLZUJSmrhKyCZU+XRATSZxmInvAlADuKt25lCls4F9P24KS+vQ76z3AbIS5fc+YN
+         lWNVuUAeZuBjd8wNr5qpmLlQnzrm5vFrnLiQFU3nTHD6BeLEMt+IDG9HwFO6RpE+wgU6
+         9XAQ==;
+        darn=freename.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1783090149; x=1783694949; darn=freename.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=Ij1GOcDRGOKIrGIawOkvG7H8IO1ROjqdlvoZdXUYH70=;
+        b=ARSDRPexyhPwt8RncoaJkQOlLqwLA4Pq1CchIKdsGbL2p12Y+bBv6VdqWTCKoeQHS/
+         pF21OMY1Fdwg0vBz79TC7dz07kafm6ze+n0/9L0AlYUAYLO1tKRFdG9KA1jxxa75RqkY
+         VIjCeCPWT1hheuApROZeBMRpeXPr78U5U22S1R6/qIfS8gPeQ2sNVbcYFjDmthR8SxOu
+         nIwR8LbhO+zNWIeD0GQEde/3p96Dg5aoX8zWXzPWd9fo5OKMxDotHknr+CKyLDkJEus+
+         EhAKpDUmp9ddocO0ujBVGb1tnB1R6gvyWqPFrRXIsXRyGcGs9ZlpbTQLJpc6A49PDbT2
+         cEjg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1783090149; x=1783694949;
+        h=to:subject:message-id:date:from:reply-to:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=Ij1GOcDRGOKIrGIawOkvG7H8IO1ROjqdlvoZdXUYH70=;
+        b=eLVAr+e1CuXxtv+ytw6du7SX072M929iM7QhLXm2C2zkd7vzHFcrSPP9gS3ZizTYOo
+         tPYfG06RgBdA7+YIUtTocosYqILTyrEE6bcV3GN6rIJ+iwuSHeXLGinSD1i/B4Tlk7S8
+         9U9oHIEoDVD0ltNHZt/Ak21rDau8cj9ovn3+jUfmzmcCwUl/CBWmgbwuoF4yvzoFOlrk
+         iUkWrOgFJo68+j2/+gnqE23DVXLsHl0bS/ws6v7KmD3XPbf30wTltoCOF/e/iu0XF9vu
+         o1BtU70A8XR8GolO9qZfoOknNHmoAN0HnhizxN7HIPrT4OLIFkloBL7NLglEQu08qxBK
+         Mstg==
+X-Gm-Message-State: AOJu0Yyxowu1qqL/LDDuFrLU8p2smttfY1J0VLUszMtFAQTemVWQf9Dm
+	DTwG+qNI0C9aKS9HmWD/hUB2WWiE0F3WMBnDlrONr/QQ0eMSmrYaW69kJoeyLdihSo3RJR9hREs
+	aEdgpn4Ng5MP2qeOQQ1DclP6HRTJl09zSbueC
+X-Gm-Gg: AfdE7clFiEgBiOOvKwMZyIbv/gK2xZyn13YcOs7Tz2jTidbjMcYqQRkYcqsDFX5QX4s
+	szv91AMwhWstfdahWU1+WsBTnp65Pl73sa0TCBsjHWi1a2Lu6gBOdSSsFg9k8wvYjhRtbwU2KJn
+	5FNFwOcwbawusyYcH/Wxz5Znd8X5ypVaIqprlF4tZ61UapJZHVWq1hTui7rmmNqUj/bLUmgEDMC
+	OcZHWwLTJJ9HFszeL+Hey+o4jSF/10j1NV6npb/McZkQCYjbPisFNLUdhkMxwPEMZipBVhj
+X-Received: by 2002:a17:907:72c4:b0:c12:ad3c:d0f1 with SMTP id
+ a640c23a62f3a-c12ad3cd31emr438456966b.64.1783090148650; Fri, 03 Jul 2026
+ 07:49:08 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a17:907:9857:b0:c12:90e5:b52c with HTTP; Fri, 3 Jul 2026
+ 07:49:07 -0700 (PDT)
+Reply-To: webapp4@outlook.com
+From: Web4app <kubulee.kl@gmail.com>
+Date: Fri, 3 Jul 2026 15:49:07 +0100
+X-Gm-Features: AVVi8CdeGj21wWcdkHljCZFOppIMW1dFGcYXuV197G17J5VyD2vtYOr5GcArCsM
+Message-ID: <CAA_MsPxccj1mYWm+eAfqdM_k=4R=+c5cr=mwFyJQLU7e4T8XPw@mail.gmail.com>
+Subject: My-name.token
+To: contact@freename.com
+Content-Type: multipart/alternative; boundary="000000000000e9b1880655b606b2"
+
